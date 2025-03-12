@@ -1,0 +1,13 @@
+{
+  "name": "TravelTime, TravelPost API",
+  "version": "1.0.0",
+  "description": "For travel post sharing application",
+  "title": "TravevelPost API",
+  "url": "https://localhost:3000/api/v1",
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  },
+  "exclude": ["node_modules/", "public/"],
+  "files": ["src/**/*.ts"]
+}

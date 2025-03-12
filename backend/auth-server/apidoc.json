@@ -1,0 +1,14 @@
+{
+  "name": "TravelTime, Auth API",
+  "version": "1.0.0",
+  "description": "For travel post sharing application",
+  "title": "Auth API",
+  "url" : "https://localhost:3001/api/v1",
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+  ,
+  "exclude": ["node_modules/", "public/"],
+  "files": ["src/**/*.ts"]
+}
