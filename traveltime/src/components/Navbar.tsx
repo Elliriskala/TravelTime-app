@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav className="bg-darkergreen shadow-xl items-center justify-between z-60 fixed w-full bottom-0 flex-row flex p-4">
         <Link to="/">
           <img
-            src="../svg/logo-no-background.svg"
+            src="/~ellinor/travelTime/dist/svg/logo-no-background.svg"
             alt="TravelTime logo"
             className="w-15 h-8 md:w-20 md:h-10 object-cover"
           />

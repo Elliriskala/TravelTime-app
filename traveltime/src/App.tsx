@@ -9,7 +9,7 @@ import Contact from './views/ContactPage';
 
 const App = () => {
   return (
-    <Router basename="">
+    <Router basename="/~ellinor/travelTime/dist">
       <UserProvider>
         <Routes>
           <Route element={<Layout />}>

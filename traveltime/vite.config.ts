@@ -5,7 +5,17 @@ import path from 'path';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  base: '/~ellinor/travelTime/dist/',
+  base: './',
+  publicDir: "./public",
+  build: {
+    outDir: "./dist",
+    rollupOptions: {
+        external: [],
+      input: {
+        home: path.resolve(__dirname, "index.html"),
+      }
+    }
+  },
   plugins: [
     react(),
     tailwindcss(),
@@ -17,7 +27,7 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 5000000, // 5MB
         globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg,ttf,json}'], // Match all assets
       },
-      includeAssets: ['png/logo-color.png', 'svg/logo-color.svg', 'index.css'],
+      includeAssets: ['png/logo-color.png','png/logo-no-background.png', 'svg/logo-color.svg', 'svg/logo-no-background.svg', 'index.css'],
       manifest: {
         name: 'TravelTime',
         short_name: 'TravelTime',

@@ -32,7 +32,7 @@ const PostRow = (props: PostProps) => {
         onClick={handlePostClick}
       >
         <img
-          className="object-cover h-full w-full"
+          className="w-full h-full"
           src={
             post.thumbnail ||
             (post.screenshots && post.screenshots[0]) ||

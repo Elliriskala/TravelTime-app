@@ -70,7 +70,7 @@ const Post = () => {
           {post &&
             (post.media_type.includes('video') ? (
               <video
-                className="object-cover m-auto"
+                className="h-100 sm:h-120 w-full object-cover m-auto"
                 controls
                 src={`${post.filename}`}
               ></video>

@@ -93,8 +93,6 @@ const deleteFile = async (
   }
 };
 
-
-
 // Helper function to clean up temporary files
 const cleanup = (files: string[]) => {
   files.forEach((file) => {

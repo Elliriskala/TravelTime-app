@@ -55,7 +55,7 @@ const Contact = () => {
         </section>
       </section>
         <img
-          src="../svg/logo-no-background.svg"
+          src="/~ellinor/travelTime/dist/svg/logo-no-background.svg"
           alt="TravelTime logo"
           className="object-cover w-25 h-15 m-auto my-4"
         />

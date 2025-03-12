@@ -73,6 +73,7 @@ const makeThumbnail = async (
     if (!req.file.mimetype.includes('video')) {
       sharp.cache(false);
       await sharp(req.file.path)
+        .rotate()
         .resize(320, 320)
         .png()
         .toFile(req.file.path + '-thumb.png')

@@ -83,7 +83,7 @@ const RegisterForm = (props: {toggleRegister: () => void}) => {
     <>
       <div className="bg-gradient-to-t from-darkgreen to-green w-70 md:w-80 m-auto rounded-xl text-lightblue shadow-transparent-blue shadow-sm mt-3">
         <img
-          src="../svg/logo-no-background.svg"
+          src="/~ellinor/travelTime/dist/svg/logo-no-background.svg"
           alt="TravelTime logo"
           className="w-35 h-20 object-cover md:w-40 md:h-25 m-auto mt-6"
         />

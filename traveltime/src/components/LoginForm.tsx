@@ -28,7 +28,7 @@ const LoginForm = (props: {toggleRegister: () => void}) => {
     <>
       <div className="bg-gradient-to-t from-darkgreen to-green w-70 md:w-80 rounded-xl text-lightblue shadow-transparent-blue shadow-sm">
         <img
-          src="../svg/logo-no-background.svg"
+          src="/~ellinor/travelTime/dist/svg/logo-no-background.svg"
           alt="TravelTime logo"
           className="w-35 h-20 object-cover md:w-40 md:h-25 m-auto mt-6"
 
