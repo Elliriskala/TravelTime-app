@@ -28,21 +28,21 @@ const BASE_MEDIA_QUERY = `
     end_date,
     description,
     created_at,
-    CONCAT('http://localhost:3002/uploads/', filename) AS filename,
+    CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename) AS filename,
     CASE
       WHEN media_type LIKE '%image%'
-      THEN CONCAT('http://localhost:3002/uploads/', filename, '-thumb.png')
-      ELSE CONCAT('http://localhost:3002/uploads/', filename, '-animation.gif')
+      THEN CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename, '-thumb.png')
+      ELSE CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename, '-animation.gif')
     END AS thumbnail,
     CASE
       WHEN media_type NOT LIKE '%image%'
       THEN (
         SELECT JSON_ARRAY(
-          CONCAT('http://localhost:3002/uploads/', filename, '-thumb-1.png'),
-          CONCAT('http://localhost:3002/uploads/', filename, '-thumb-2.png'),
-          CONCAT('http://localhost:3002/uploads/', filename, '-thumb-3.png'),
-          CONCAT('http://localhost:3002/uploads/', filename, '-thumb-4.png'),
-          CONCAT('http://localhost:3002/uploads/', filename, '-thumb-5.png')
+          CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename, '-thumb-1.png'),
+          CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename, '-thumb-2.png'),
+          CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename, '-thumb-3.png'),
+          CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename, '-thumb-4.png'),
+          CONCAT('https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/', filename, '-thumb-5.png')
         )
       )
       ELSE NULL

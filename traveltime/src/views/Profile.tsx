@@ -286,7 +286,7 @@ const Profile = () => {
                       <img
                         className="object-cover h-full w-full"
                         src={
-                          'http://localhost:3002/uploads/' +
+                          'https://ucad-server-https.northeurope.cloudapp.azure.com:3002/uploads/' +
                             userProfile.profile_picture || undefined
                         }
                         alt="profile picture"
