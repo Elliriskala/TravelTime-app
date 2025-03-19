@@ -22,9 +22,9 @@ app.use(cors());
 app.use(express.json());
 
 // serve docs folder for apidoc
-app.use('/authentication/docs', express.static('docs'));
+app.use('/docs', express.static('docs'));
 
-app.use('/api/v1/authentication', api);
+app.use('/api/v1', api);
 
 app.use(notFound);
 app.use(errorHandler);

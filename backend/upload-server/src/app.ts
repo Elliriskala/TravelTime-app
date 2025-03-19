@@ -28,10 +28,10 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 // serve docs folder for apidoc
-app.use('/docs/upload', express.static('docs'));
+app.use('/docs', express.static('docs'));
 
 app.get('/', (req, res) => {
-  res.send('API Documentation is available at /docs/upload');
+  res.send('API Documentation is available at /docs');
 });
 
 
