@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "For travel post sharing application",
   "title": "TravevelPost API",
-  "url": "https://ucad-server-https.northeurope.cloudapp.azure.com:3000/docs",
+  "url": "https://ucad-server-https.northeurope.cloudapp.azure.com/postapi/docs",
   "template": {
     "withCompare": true,
     "withGenerator": true

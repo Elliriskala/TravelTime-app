@@ -28,14 +28,14 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 // serve docs folder for apidoc
-app.use('/docs', express.static('docs'));
+app.use('/docs/upload', express.static('docs'));
 
 app.get('/', (req, res) => {
-  res.send('API Documentation is available at /docs');
+  res.send('API Documentation is available at /docs/upload');
 });
 
 
-app.use('/api/v1', api);
+app.use('/api/v1/upload', api);
 
 app.use(notFound);
 app.use(errorHandler);

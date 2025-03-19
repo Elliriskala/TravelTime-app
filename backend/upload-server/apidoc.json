@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "For Metropolia Courses",
   "title": "Post API",
-  "url" : "https://ucad-server-https.northeurope.cloudapp.azure.com:3002/docs",
+  "url" : "https://ucad-server-https.northeurope.cloudapp.azure.com/upload/docs",
   "template": {
     "withCompare": true,
     "withGenerator": true
