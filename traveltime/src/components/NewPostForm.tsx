@@ -6,6 +6,7 @@ import useForm from '../hooks/formHooks';
 const NewPostForm = ({ifUploadSuccess}: {ifUploadSuccess: () => void}) => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [file, setFile] = useState<File | null>(null);
+  const [uploading, setUploading] = useState<boolean>(false);
   const fileRef = useRef<HTMLInputElement | null>(null);
   const [uploadResult, setUploadResult] = useState<string>('');
   const {postFile} = useFile();
@@ -55,9 +56,12 @@ const NewPostForm = ({ifUploadSuccess}: {ifUploadSuccess: () => void}) => {
   // upload a new post
   const doUpload = async () => {
     try {
+      // set the uploading state to true
+      setUploading(true);
       const token = localStorage.getItem('token');
       if (!file || !token) {
         setUploadResult('File or token is missing');
+        setUploading(false);
         return;
       }
       // upload the file to fileserver and post metadata to media api server
@@ -74,6 +78,9 @@ const NewPostForm = ({ifUploadSuccess}: {ifUploadSuccess: () => void}) => {
       ifUploadSuccess();
     } catch (e) {
       setUploadResult((e as Error).message);
+    } finally {
+      // reset the uploading state to false when done uplaoding
+      setUploading(false);
     }
   };
 
@@ -254,9 +261,11 @@ const NewPostForm = ({ifUploadSuccess}: {ifUploadSuccess: () => void}) => {
       <div className="flex flex-row my-4 m-auto justify-center gap-4">
         <button
           type="submit"
+          disabled={uploading}
           className="bg-darkgreen text-offwhite shadow-xl text-center p-1 rounded-4xl transform-all duration-300 ease-in-out hover:bg-darkergreen cursor-pointer w-20 font-bold transform hover:scale-105 active:scale-95"
-        >
-          Post
+          style={{ opacity: uploading ? 0.7 : 1, cursor: uploading ? 'not-allowed' : 'pointer' }}
+          >
+            {uploading ? 'Uploading...' : 'Post'}
         </button>
         <button
           type="reset"
