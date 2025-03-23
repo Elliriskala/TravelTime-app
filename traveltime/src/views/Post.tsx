@@ -90,7 +90,7 @@ const Post = () => {
               <img
                 src={
                   post
-                    ? 'http://localhost:3002/uploads/' + post.profile_picture
+                    ? 'https://ucad-server-https.northeurope.cloudapp.azure.com/upload/uploads/' + post.profile_picture
                     : undefined
                 }
                 alt="profile picture"

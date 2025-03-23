@@ -19,7 +19,7 @@ const Layout = () => {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <main className="flex flex-col mx-4 my-2 lg:mx-20 pb-25">
+        <main className="flex flex-col mx-4 my-2 mb-30 lg:mx-20 pb-25">
           <Outlet />
         </main>
         <Navbar />

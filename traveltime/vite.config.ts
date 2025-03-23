@@ -5,7 +5,7 @@ import path from 'path';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  base: './',
+  base: '/~ellinor/travelTime/',
   publicDir: "./public",
   build: {
     outDir: "./dist",
@@ -23,9 +23,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       devOptions: {enabled: true},
       workbox: {
-        navigateFallback: '/',
+        navigateFallback: 'index.html',
+        navigateFallbackAllowlist: [/^\/$/,/^\/[a-z0-9]+/,/^\/[a-z0-9]+\/[a-z0-9]+/], // Allow all client routes
         maximumFileSizeToCacheInBytes: 5000000, // 5MB
-        globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg,ttf,json}'], // Match all assets
+        globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg,ttf,json,ts,tsx}'], // Match all assets
       },
       includeAssets: ['png/logo-color.png','png/logo-no-background.png', 'svg/logo-color.svg', 'svg/logo-no-background.svg', 'index.css'],
       manifest: {

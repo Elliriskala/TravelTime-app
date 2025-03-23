@@ -1,4 +1,4 @@
-import {Route, BrowserRouter as Router, Routes} from 'react-router';
+import {Route, BrowserRouter, Routes} from 'react-router';
 import Layout from './components/Layout';
 import Explorepage from './views/Explorepage';
 import Login from './views/Login';
@@ -9,7 +9,11 @@ import Contact from './views/ContactPage';
 
 const App = () => {
   return (
+<<<<<<< HEAD
     <Router basename="/~ellinor/travelTime">
+=======
+    <BrowserRouter basename="/~ellinor/travelTime">
+>>>>>>> 86a29c5e22b752a251815d873abb16264fd2392f
       <UserProvider>
         <Routes>
           <Route element={<Layout />}>
@@ -21,7 +25,7 @@ const App = () => {
           </Route>
         </Routes>
       </UserProvider>
-    </Router>
+    </BrowserRouter>
   );
 };
 export default App;

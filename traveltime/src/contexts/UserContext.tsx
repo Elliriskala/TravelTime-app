@@ -1,5 +1,5 @@
 // UserContext.tsx
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import {UserWithNoPassword} from 'hybrid-types/DBTypes';
 import {useAuthentication, useUser} from '../hooks/apiHooks';
 import {useLocation, useNavigate} from 'react-router';
@@ -13,6 +13,10 @@ const UserProvider = ({children}: {children: React.ReactNode}) => {
   const {getUserByToken} = useUser();
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    handleAutoLogin();
+  }, [])
 
   // login, logout and autologin functions are here instead of components
   const handleLogin = async (credentials: Credentials) => {

@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.use('/api/v1', api);
+app.use('/api/v1/upload', api);
 
 app.use(notFound);
 app.use(errorHandler);

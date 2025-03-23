@@ -43,9 +43,7 @@ const doUpload = (
 
 const router = express.Router();
 
-router.route('/upload')
-
-.post(authenticate, doUpload, makeThumbnail, uploadFile);
+router.route('/upload').post(authenticate, doUpload, makeThumbnail, uploadFile);
 
 router.route('/delete/:filename').delete(authenticate, deleteFile);
 
