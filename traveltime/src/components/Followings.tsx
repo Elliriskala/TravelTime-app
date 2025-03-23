@@ -22,7 +22,7 @@ const Followings = (
                 <img
                   src={
                     user
-                      ? 'https://ucad-server-https.northeurope.cloudapp.azure.com/uploads/' +
+                      ? 'https://ucad-server-https.northeurope.cloudapp.azure.com/upload/uploads/' +
                         following.profile_picture
                       : undefined
                   }
